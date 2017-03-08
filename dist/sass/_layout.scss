@@ -1,0 +1,60 @@
+@import "custom-variables";
+
+.inner{
+	height: 100vh;
+	background-image: url("../img/inner-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: $navbar-height;
+	color: #fff;
+	display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+	
+	p{
+		color: rgba(255, 255, 255, .6);
+		font-size: 12px;
+
+	}
+    .inner-title{
+    	text-align: center;
+    	padding-top: 17vh;
+    	h1{
+    		margin-bottom: 2vh;
+    	}
+    	.btn{
+    		margin-top: 9vh;
+    	}
+    	p{
+    		padding: 0 5vw;
+    		font-size: 18px;
+
+    	}
+    }
+    .inner-advantages{
+    	padding-bottom: 6.5vh;
+		
+		p{
+			text-align: center;
+		}
+		.col-md-4{
+			&:first-child{ 
+    			p{
+    				text-align: left;
+    			}
+    		}
+			&:last-child{ 
+    			p{
+    				text-align: right;
+    			}
+    		} 
+		}
+    	.title{    		
+    		margin-bottom: 3vh;  
+
+    		 		
+    	}
+    }
+}
