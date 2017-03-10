@@ -12,11 +12,18 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding-bottom: 20px;
 
   > .item {
     display: none;
     position: relative;
     @include transition(.6s ease-in-out left);
+
+    .carousel-caption{
+      h3{
+        margin-bottom: 20px;
+      }
+    }
 
     // Account for jankitude on images
     > img,
@@ -184,12 +191,12 @@
 
   li {
     display: inline-block;
-    width:  10px;
-    height: 10px;
+    width:  8px;
+    height: 8px;
     margin: 1px;
     text-indent: -999px;
-    border: 1px solid $carousel-indicator-border-color;
-    border-radius: 10px;
+    // border: 1px solid $carousel-indicator-border-color;
+    border-radius: 8px;
     cursor: pointer;
 
     // IE8-9 hack for event handling
@@ -201,14 +208,14 @@
     //
     // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
     // set alpha transparency for the best results possible.
-    background-color: #000 \9; // IE8
-    background-color: rgba(0,0,0,0); // IE9
+    // background-color: #000 \9; // IE8
+    background-color: #b8b6c1; // IE9
   }
   .active {
     margin: 0;
-    width:  12px;
-    height: 12px;
-    background-color: $carousel-indicator-active-bg;
+    width:  10px;
+    height: 10px;
+    background-color: $gray-dark;
   }
 }
 
@@ -216,18 +223,24 @@
 // -----------------------------
 // Hidden by default for smaller viewports
 .carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
+  // position: absolute;
+  // left: 15%;
+  // right: 15%;
+  // bottom: 20px;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  max-width: 720px;
+  margin: 0 auto;
   color: $carousel-caption-color;
   text-align: center;
-  text-shadow: $carousel-text-shadow;
+  font-family: 'montserratregular';
+  // text-shadow: $carousel-text-shadow;
   & .btn {
     text-shadow: none; // No shadow for button elements in carousel-caption
+  }
+  h3{
+    color: $gray-dark;
   }
 }
 
@@ -265,6 +278,6 @@
 
   // Move up the indicators
   .carousel-indicators {
-    bottom: 20px;
+    bottom: 0;
   }
 }

@@ -16,7 +16,6 @@
 	p{
 		color: rgba(255, 255, 255, .6);
 		font-size: 12px;
-
 	}
     .inner-title{
     	text-align: center;
@@ -36,25 +35,119 @@
     .inner-advantages{
     	padding-bottom: 6.5vh;
 		
-		p{
+		.title, p{
 			text-align: center;
 		}
 		.col-md-4{
 			&:first-child{ 
-    			p{
+    			.title, p{
     				text-align: left;
     			}
     		}
 			&:last-child{ 
-    			p{
+    			.title, p{
     				text-align: right;
     			}
     		} 
 		}
     	.title{    		
-    		margin-bottom: 3vh;  
-
-    		 		
+    		margin-bottom: 3vh;     		 		
     	}
     }
+}
+
+.standart-section{
+	padding: 120px 0;
+}
+
+.events-wrap{
+	padding: 75px 0;
+	
+	.event-item-img{
+		cursor: pointer;
+		position: relative;
+		&:hover{
+			.on-img-hover{
+				opacity: 1;
+			}
+		}
+		img{
+			width: 100%;
+		}
+		.on-img-hover{
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, .3);
+			transition: all .5s linear; 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.icon-wrap{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 60px;
+				height: 60px;
+				color: #fff;
+				background-color: #cf1b41;
+				font-size: 20px;
+				border-radius: 50%;
+			}
+		}	
+	}
+	.event-item-desq{
+		margin: 30px 0;
+
+		.title{
+			font-family: 'montserratregular';
+			font-size: 16px;
+			color: $gray-dark;
+			margin-bottom: 15px;
+		}
+	}
+	.event-item-location{
+		.country{
+			font-family: 'montserratregular';
+			color: $gray-dark;
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			.glyphicon{
+				font-size: 17px;
+				margin-right: 5px;
+			}
+		}
+		dl{
+			display: inline-block;
+			& + dl{
+				margin-left: 18px;
+			}
+		}
+	}	
+}
+
+.section-w-bg{
+	padding: 50px 0;
+	min-height: 480px;
+	display: flex;
+	align-items: center;
+	&.story{
+		color: #fff;
+		background: url("../img/our-story-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+	}
+	.section-w-bg-text{
+		h4{
+			font-size: 28px;
+			margin-bottom: 25px;
+			font-family: 'montserratregular';
+		}
+	}
 }

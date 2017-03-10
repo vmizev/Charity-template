@@ -661,7 +661,7 @@ $alert-danger-border:         $state-danger-border !default;
 //##
 
 //** Background color of the whole progress component
-$progress-bg:                 #f5f5f5 !default;
+$progress-bg:                 #dad8df !default;
 //** Progress bar text color
 $progress-bar-color:          #fff !default;
 //** Variable for setting rounded corners on progress bar.
@@ -825,10 +825,10 @@ $carousel-control-width:                      15% !default;
 $carousel-control-opacity:                    .5 !default;
 $carousel-control-font-size:                  20px !default;
 
-$carousel-indicator-active-bg:                #fff !default;
+$carousel-indicator-active-bg:                #b8b6c1 !default;
 $carousel-indicator-border-color:             #fff !default;
 
-$carousel-caption-color:                      #fff !default;
+$carousel-caption-color:                      $gray-base !default;
 
 
 //== Close
