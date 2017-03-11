@@ -4139,7 +4139,8 @@ tbody.collapse.in {
     @media (max-width: 768px) {
       .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
         border-color: transparent;
-        color: #150c31; } }
+        color: #150c31;
+        background-color: transparent; } }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #fff;
     background-color: transparent; }
