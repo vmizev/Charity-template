@@ -1,5 +1,11 @@
 @import "custom-variables";
 
+header{
+	transition: all .5s linear;
+	&.on-scroll{
+		background-color: $footer-bg;
+	}
+}
 .inner{
 	height: 100vh;
 	background-image: url("../img/inner-bg.jpg");
@@ -12,6 +18,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
+
+    @media (max-width: 1023px){
+    	height: auto;
+    	padding-bottom: 50px;
+    }
 	
 	p{
 		color: rgba(255, 255, 255, .6);
@@ -20,43 +31,71 @@
     .inner-title{
     	text-align: center;
     	padding-top: 17vh;
+    	@media (max-width: 1023px){
+	    	padding-top: 7vh;
+	    }
+
     	h1{
-    		margin-bottom: 2vh;
+    		margin-bottom: 2vh;  
+    		font-family: 'montserratregular';
+    		font-size: 60px;  
+    		@media (max-width: 768px){
+				font-size: 40px;
+			}		
     	}
     	.btn{
     		margin-top: 9vh;
+    		@media (max-width: 1023px){
+		    	margin: 3vh 0;
+		    }
     	}
     	p{
     		padding: 0 5vw;
     		font-size: 18px;
-
+    		@media (max-width: 768px){
+				font-size: 16px;
+			}
     	}
     }
     .inner-advantages{
     	padding-bottom: 6.5vh;
+		@media (max-width: 1023px){
+			padding-bottom: 0;
+			margin-top: 2vh;
+		}  
+
+    	.col-sm-12{
+    		margin-bottom: 4vh;
+    	}
 		
-		
-		.col-md-4{
-			&:nth-child(2){ 
-				padding-left: 45px;    		
-    		}
-			&:last-child{
-				padding-left: 60px;
-			}    		
-		}
     	.title{    		
-    		margin-bottom: 3vh;     		 		
+    		margin-bottom: 3vh; 
+    		@media (max-width: 990px){
+    			margin-bottom: 1vh;
+    			text-align: center;
+    		}    		 		
+    	}
+    	p{
+    		@media (max-width: 990px){
+    			text-align: center;
+    		}
     	}
     }
 }
 
 .standart-section{
 	padding: 120px 0;
+	@media (max-width: 992px){
+		padding: 50px 0;
+	}
 }
 
 .events-wrap{
 	padding: 75px 0;
-	
+	@media (max-width: 992px){
+		padding: 25px 0;
+	} 
+
 	.event-item-img{
 		cursor: pointer;
 		position: relative;
@@ -96,12 +135,18 @@
 	}
 	.event-item-desq{
 		margin: 30px 0;
+		@media (max-width: 768px){
+			margin: 15px 0;
+		}
 
 		.title{
 			font-family: 'montserratregular';
 			font-size: 16px;
 			color: $gray-dark;
 			margin-bottom: 15px;
+			@media (max-width: 768px){
+				margin-bottom: 10px;
+			}
 		}
 	}
 	.event-item-location{
@@ -118,6 +163,9 @@
 		}
 		dl{
 			display: inline-block;
+			@media (max-width: 768px){
+				margin-bottom: 50px;
+			}
 			& + dl{
 				margin-left: 18px;
 			}
@@ -136,6 +184,9 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top center;
+		@media (max-width: 768px){
+			background-position: left top;
+		}
 	}
 	&.visit-shop{
 		color: #fff;
@@ -170,16 +221,28 @@
 	
 	.help-list{
 		padding-top: 80px;
+		@media (max-width: 768px){
+			padding-top: 40px;
+		}
 
 		.donate-item-wrap{
 			display: flex;
 			margin-bottom: 60px;
-			&:first-child{
-				padding-right: 55px;
+			@media (max-width: 768px){
+				margin-bottom: 30px;
 			}
-			&:last-child{
+			&:nth-child(even){
 				padding-left: 55px;
+				@media (max-width: 992px){
+					padding-left: 15px;
+				}
 			}
+			&:nth-child(odd){
+				padding-right: 55px;
+				@media (max-width: 992px){
+					padding-right: 15px;
+				}
+			}			
 
 			.donate-icon-wrap{
 				width: 80px;
@@ -215,10 +278,15 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-top: 80px;
+		@media (max-width: 768px){
+			justify-content: center;
+		}
 
 		.donor-item{
 			text-align: center;
+			padding: 10px 20px;
 
 			.donor-item-img{
 				img{
@@ -249,10 +317,21 @@ footer{
     	.footer-nav{
     		ul{
     			display: flex;
+    			@media (max-width: 500px){
+					flex-direction: column; 
+				}
     			li {
     				color: #fff;
-    				
+    				@media (max-width: 500px){
+						&::before{
+    						content: '\2022';
+							margin-right: 2px;
+    					} 
+					}
     				& + li{
+    					@media (max-width: 500px){
+							margin-left: 0; 
+						}
     					margin-left: 2px;
     					&::before{
     						content: '\2022';

@@ -202,6 +202,12 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: $border-radius-base;
+  @media (max-width: 768px){
+    margin-right: 50px;
+  }
+  @media (max-width: 480px){
+    margin-right: $navbar-padding-horizontal;
+  }
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
@@ -234,9 +240,20 @@
 .navbar-nav {
   margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
 
+  > li {
+    padding: 0px 40px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $navbar-default-li-hover-bg; 
+      a{
+        color: #000;
+      }     
+    }
+  }
   > li > a {
-    padding-top:    10px;
-    padding-bottom: 10px;
+    padding-top:    15px;
+    padding-bottom: 15px;
     line-height: $line-height-computed - $navbar-default-link-border-width;
     font-size: $navbar-default-link-font-size;
     font-family: $navbar-default-link-font-family;
@@ -247,6 +264,8 @@
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
+    margin: 0px -15px;
+    background-color: $footer-bg;
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -410,6 +429,12 @@
 
   .navbar-brand {
     color: $navbar-default-brand-color;
+    @media (max-width: 768px){
+      margin-left: 50px;
+    }
+    @media (max-width: 480px){
+      margin-left: $navbar-padding-horizontal;
+    }
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
@@ -430,6 +455,15 @@
         color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
         border-color: $navbar-default-link-border-color;
+        @media (max-width: 768px){
+          border-color: transparent;
+          color: $gray-dark;
+        }
+      }
+    }
+    > .active {
+      @media (max-width: 768px){
+        background-color: $navbar-default-li-hover-bg;
       }
     }
     > .active > a {
@@ -439,6 +473,10 @@
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
         border-color: $navbar-default-link-border-color;
+        @media (max-width: 768px){
+          border-color: transparent;
+          color: $gray-dark;
+        }
       }
     }
     > .disabled > a {
@@ -458,7 +496,7 @@
       background-color: $navbar-default-toggle-hover-bg;
     }
     .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
+      background-color: $brand-primary;
     }
   }
 
