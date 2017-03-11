@@ -245,7 +245,10 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: $navbar-default-li-hover-bg; 
+      @media (max-width: 768px) {
+         background-color: $navbar-default-li-hover-bg; 
+      }
+     
       a{
         color: #000;
       }     

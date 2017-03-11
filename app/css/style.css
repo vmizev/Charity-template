@@ -3946,10 +3946,11 @@ tbody.collapse.in {
   margin: 20px -15px; }
   .navbar-nav > li {
     padding: 0px 40px; }
-    .navbar-nav > li:hover, .navbar-nav > li:focus, .navbar-nav > li:active {
-      background-color: #fff; }
-      .navbar-nav > li:hover a, .navbar-nav > li:focus a, .navbar-nav > li:active a {
-        color: #000; }
+    @media (max-width: 768px) {
+      .navbar-nav > li:hover, .navbar-nav > li:focus, .navbar-nav > li:active {
+        background-color: #fff; } }
+    .navbar-nav > li:hover a, .navbar-nav > li:focus a, .navbar-nav > li:active a {
+      color: #000; }
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
