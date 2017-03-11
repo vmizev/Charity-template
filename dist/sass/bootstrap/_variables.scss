@@ -30,6 +30,8 @@ $brand-danger:          #d9534f !default;
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-base !default;
+//** Background color for `<footer>`.
+$footer-bg:               #202020 !default;
 
 //** Global textual link color.
 $link-color:            $gray-base !default;
@@ -157,6 +159,11 @@ $btn-padding-base-horizontal:    60px !default
 $btn-default-color:              #150c31 !default;
 $btn-default-bg:                 transparent !default;
 $btn-default-border:             #150c31 !default;
+
+$btn-default-dark-color:         #fff !default;
+$btn-default-dark-color-hover:   #150c31 !default;
+$btn-default-dark-bg:            #150c31 !default;
+$btn-default-dark-border:        #150c31 !default;
 
 $btn-primary-color:              #fff !default; 
 $btn-primary-bg:                 $brand-primary !default;

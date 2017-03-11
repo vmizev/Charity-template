@@ -193,11 +193,14 @@
     display: inline-block;
     width:  8px;
     height: 8px;
-    margin: 1px;
+    // margin: 1px;
     text-indent: -999px;
     // border: 1px solid $carousel-indicator-border-color;
     border-radius: 8px;
     cursor: pointer;
+    & + li{
+      margin-left: 17px;
+    }
 
     // IE8-9 hack for event handling
     //
@@ -212,9 +215,9 @@
     background-color: #b8b6c1; // IE9
   }
   .active {
-    margin: 0;
-    width:  10px;
-    height: 10px;
+    // margin: 0;
+    // width:  10px;
+    // height: 10px;
     background-color: $gray-dark;
   }
 }

@@ -1,0 +1,123 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$blood-ico-name: 'blood-ico';
+$blood-ico-x: 0px;
+$blood-ico-y: 0px;
+$blood-ico-offset-x: 0px;
+$blood-ico-offset-y: 0px;
+$blood-ico-width: 40px;
+$blood-ico-height: 40px;
+$blood-ico-total-width: 80px;
+$blood-ico-total-height: 79px;
+$blood-ico-image: '../img/sprite.png';
+$blood-ico: (0px, 0px, 0px, 0px, 40px, 40px, 80px, 79px, '../img/sprite.png', 'blood-ico', );
+$goods-ico-name: 'goods-ico';
+$goods-ico-x: 0px;
+$goods-ico-y: 40px;
+$goods-ico-offset-x: 0px;
+$goods-ico-offset-y: -40px;
+$goods-ico-width: 40px;
+$goods-ico-height: 39px;
+$goods-ico-total-width: 80px;
+$goods-ico-total-height: 79px;
+$goods-ico-image: '../img/sprite.png';
+$goods-ico: (0px, 40px, 0px, -40px, 40px, 39px, 80px, 79px, '../img/sprite.png', 'goods-ico', );
+$volunteer-ico-name: 'volunteer-ico';
+$volunteer-ico-x: 40px;
+$volunteer-ico-y: 0px;
+$volunteer-ico-offset-x: -40px;
+$volunteer-ico-offset-y: 0px;
+$volunteer-ico-width: 40px;
+$volunteer-ico-height: 40px;
+$volunteer-ico-total-width: 80px;
+$volunteer-ico-total-height: 79px;
+$volunteer-ico-image: '../img/sprite.png';
+$volunteer-ico: (40px, 0px, -40px, 0px, 40px, 40px, 80px, 79px, '../img/sprite.png', 'volunteer-ico', );
+$wallet-ico-name: 'wallet-ico';
+$wallet-ico-x: 40px;
+$wallet-ico-y: 40px;
+$wallet-ico-offset-x: -40px;
+$wallet-ico-offset-y: -40px;
+$wallet-ico-width: 40px;
+$wallet-ico-height: 34px;
+$wallet-ico-total-width: 80px;
+$wallet-ico-total-height: 79px;
+$wallet-ico-image: '../img/sprite.png';
+$wallet-ico: (40px, 40px, -40px, -40px, 40px, 34px, 80px, 79px, '../img/sprite.png', 'wallet-ico', );
+$spritesheet-width: 80px;
+$spritesheet-height: 79px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($blood-ico, $goods-ico, $volunteer-ico, $wallet-ico, );
+$spritesheet: (80px, 79px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

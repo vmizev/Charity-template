@@ -5,13 +5,6 @@
 @import "default-clases";
 @import "layout";
 @import "lightbox";
-
-
-
-
-
-
-
-
-
+@import "sprite"; 
+@include sprites($spritesheet-sprites);
 

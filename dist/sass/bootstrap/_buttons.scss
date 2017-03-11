@@ -76,6 +76,13 @@ a.btn {
     color: #feffff;
   }
 }
+.btn-default-dark {
+  @include button-variant($btn-default-dark-color, $btn-default-dark-bg, $btn-default-dark-border);
+  &:hover{
+    background-color: $btn-default-dark-color;
+    color: $btn-default-dark-color-hover;
+  }
+}
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }

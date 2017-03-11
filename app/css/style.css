@@ -2914,6 +2914,46 @@ fieldset[disabled] a.btn {
     background-color: #150c31;
     color: #feffff; }
 
+.btn-default-dark {
+  color: #fff;
+  background-color: #150c31;
+  border-color: #150c31; }
+  .btn-default-dark:focus, .btn-default-dark.focus {
+    color: #fff;
+    background-color: #030208;
+    border-color: black; }
+  .btn-default-dark:hover {
+    color: #fff;
+    background-color: #030208;
+    border-color: black; }
+  .btn-default-dark:active, .btn-default-dark.active,
+  .open > .btn-default-dark.dropdown-toggle {
+    color: #fff;
+    background-color: #030208;
+    border-color: black; }
+    .btn-default-dark:active:hover, .btn-default-dark:active:focus, .btn-default-dark:active.focus, .btn-default-dark.active:hover, .btn-default-dark.active:focus, .btn-default-dark.active.focus,
+    .open > .btn-default-dark.dropdown-toggle:hover,
+    .open > .btn-default-dark.dropdown-toggle:focus,
+    .open > .btn-default-dark.dropdown-toggle.focus {
+      color: #fff;
+      background-color: black;
+      border-color: black; }
+  .btn-default-dark:active, .btn-default-dark.active,
+  .open > .btn-default-dark.dropdown-toggle {
+    background-image: none; }
+  .btn-default-dark.disabled:hover, .btn-default-dark.disabled:focus, .btn-default-dark.disabled.focus, .btn-default-dark[disabled]:hover, .btn-default-dark[disabled]:focus, .btn-default-dark[disabled].focus,
+  fieldset[disabled] .btn-default-dark:hover,
+  fieldset[disabled] .btn-default-dark:focus,
+  fieldset[disabled] .btn-default-dark.focus {
+    background-color: #150c31;
+    border-color: #150c31; }
+  .btn-default-dark .badge {
+    color: #150c31;
+    background-color: #fff; }
+  .btn-default-dark:hover {
+    background-color: #fff;
+    color: #150c31; }
+
 .btn-primary {
   color: #fff;
   background-color: #32be60;
@@ -5710,16 +5750,14 @@ button.close {
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin: 1px;
     text-indent: -999px;
     -webkit-border-radius: 8px;
             border-radius: 8px;
     cursor: pointer;
     background-color: #b8b6c1; }
+    .carousel-indicators li + li {
+      margin-left: 17px; }
   .carousel-indicators .active {
-    margin: 0;
-    width: 10px;
-    height: 10px;
     background-color: #150c31; }
 
 .carousel-caption {
@@ -6117,12 +6155,10 @@ button {
       font-size: 18px; }
   .inner .inner-advantages {
     padding-bottom: 6.5vh; }
-    .inner .inner-advantages .title, .inner .inner-advantages p {
-      text-align: center; }
-    .inner .inner-advantages .col-md-4:first-child .title, .inner .inner-advantages .col-md-4:first-child p {
-      text-align: left; }
-    .inner .inner-advantages .col-md-4:last-child .title, .inner .inner-advantages .col-md-4:last-child p {
-      text-align: right; }
+    .inner .inner-advantages .col-md-4:nth-child(2) {
+      padding-left: 45px; }
+    .inner .inner-advantages .col-md-4:last-child {
+      padding-left: 60px; }
     .inner .inner-advantages .title {
       margin-bottom: 3vh; }
 
@@ -6224,10 +6260,121 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center; }
+  .section-w-bg.visit-shop {
+    color: #fff;
+    background: url("../img/visit-shop-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center; }
+    .section-w-bg.visit-shop .section-w-bg-text h4 {
+      color: #150c31; }
+    .section-w-bg.visit-shop .section-w-bg-text p {
+      color: #807996; }
+    .section-w-bg.visit-shop .section-w-bg-text .btn {
+      margin-top: 35px; }
   .section-w-bg .section-w-bg-text h4 {
     font-size: 28px;
     margin-bottom: 25px;
     font-family: 'montserratregular'; }
+
+.donate-wrap .help-list {
+  padding-top: 80px; }
+  .donate-wrap .help-list .donate-item-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px; }
+    .donate-wrap .help-list .donate-item-wrap:first-child {
+      padding-right: 55px; }
+    .donate-wrap .help-list .donate-item-wrap:last-child {
+      padding-left: 55px; }
+    .donate-wrap .help-list .donate-item-wrap .donate-icon-wrap {
+      width: 80px;
+      height: 80px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      border: 2px solid #eeeaf2;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-right: 20px; }
+      .donate-wrap .help-list .donate-item-wrap .donate-icon-wrap .icon {
+        display: inline-block; }
+    .donate-wrap .help-list .donate-item-wrap .donate-item-description .title {
+      font-family: 'montserratregular';
+      font-size: 18px;
+      color: #150c31;
+      margin: 15px 0; }
+
+.best-donors-list-wrap .best-donors-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 80px; }
+  .best-donors-list-wrap .best-donors-list .donor-item {
+    text-align: center; }
+    .best-donors-list-wrap .best-donors-list .donor-item .donor-item-img img {
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      margin-bottom: 15px; }
+    .best-donors-list-wrap .best-donors-list .donor-item dl {
+      margin-bottom: 0; }
+      .best-donors-list-wrap .best-donors-list .donor-item dl dt {
+        font-family: 'montserratregular';
+        font-size: 18px;
+        color: #150c31; }
+
+footer {
+  padding: 37px 0 30px 0;
+  background-color: #202020; }
+  footer .footer-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 12px; }
+    footer .footer-wrap .footer-nav ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      footer .footer-wrap .footer-nav ul li {
+        color: #fff; }
+        footer .footer-wrap .footer-nav ul li + li {
+          margin-left: 2px; }
+          footer .footer-wrap .footer-nav ul li + li::before {
+            content: '\2022';
+            margin-right: 2px; }
+        footer .footer-wrap .footer-nav ul li a:hover {
+          color: #fff;
+          text-decoration: underline; }
 
 /* Preload images */
 body:after {
@@ -6399,3 +6546,27 @@ body:after {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
+
+.blood-ico {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 40px;
+  height: 40px; }
+
+.goods-ico {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -40px;
+  width: 40px;
+  height: 39px; }
+
+.volunteer-ico {
+  background-image: url(../img/sprite.png);
+  background-position: -40px 0px;
+  width: 40px;
+  height: 40px; }
+
+.wallet-ico {
+  background-image: url(../img/sprite.png);
+  background-position: -40px -40px;
+  width: 40px;
+  height: 34px; }

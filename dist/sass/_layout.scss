@@ -35,20 +35,14 @@
     .inner-advantages{
     	padding-bottom: 6.5vh;
 		
-		.title, p{
-			text-align: center;
-		}
+		
 		.col-md-4{
-			&:first-child{ 
-    			.title, p{
-    				text-align: left;
-    			}
+			&:nth-child(2){ 
+				padding-left: 45px;    		
     		}
-			&:last-child{ 
-    			.title, p{
-    				text-align: right;
-    			}
-    		} 
+			&:last-child{
+				padding-left: 60px;
+			}    		
 		}
     	.title{    		
     		margin-bottom: 3vh;     		 		
@@ -143,11 +137,134 @@
 		background-size: cover;
 		background-position: top center;
 	}
+	&.visit-shop{
+		color: #fff;
+		background: url("../img/visit-shop-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+		.section-w-bg-text{
+			h4{
+				color: $gray-dark;				
+			}	
+			p{
+				color: $gray-base;
+			}
+			.btn{
+				margin-top: 35px;
+			}
+		}
+	}
 	.section-w-bg-text{
 		h4{
 			font-size: 28px;
 			margin-bottom: 25px;
 			font-family: 'montserratregular';
 		}
+	}
+}
+
+
+
+.donate-wrap{
+	
+	.help-list{
+		padding-top: 80px;
+
+		.donate-item-wrap{
+			display: flex;
+			margin-bottom: 60px;
+			&:first-child{
+				padding-right: 55px;
+			}
+			&:last-child{
+				padding-left: 55px;
+			}
+
+			.donate-icon-wrap{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				border: 2px solid #eeeaf2;
+				display: flex;
+				flex-shrink: 0;
+				justify-content: center;
+				align-items: center;
+				margin-right: 20px;
+
+				.icon {
+					display: inline-block;
+				}			
+			}
+			.donate-item-description{
+				
+				.title{
+					font-family: 'montserratregular';
+					font-size: 18px;
+					color: $gray-dark;
+					margin: 15px 0;
+				}
+			}
+		}		
+	}
+}
+
+.best-donors-list-wrap{	
+
+	.best-donors-list{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 80px;
+
+		.donor-item{
+			text-align: center;
+
+			.donor-item-img{
+				img{
+					border-radius: 50%;
+					margin-bottom: 15px;
+				}
+			}
+			dl{
+				margin-bottom: 0;
+				dt{
+					font-family: 'montserratregular';
+					font-size: 18px;
+					color: $gray-dark;
+				}
+			}
+		}
+	}
+}
+
+footer{
+	padding: 37px 0 30px 0;
+	background-color: $footer-bg;
+	.footer-wrap{
+		display: flex;
+    	justify-content: space-between;
+		font-size: 12px;
+    	
+    	.footer-nav{
+    		ul{
+    			display: flex;
+    			li {
+    				color: #fff;
+    				
+    				& + li{
+    					margin-left: 2px;
+    					&::before{
+    						content: '\2022';
+							margin-right: 2px;
+    					}
+    				}
+    				a:hover{
+    					color: #fff;
+    					text-decoration: underline;
+    				}
+    			}
+    		}
+    	}
 	}
 }
