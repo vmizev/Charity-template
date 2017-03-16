@@ -23,7 +23,9 @@ header{
     	height: auto;
     	padding-bottom: 50px;
     }
-	
+	@media (max-height: 600px){
+    	height: auto;
+    }
 	p{
 		color: rgba(255, 255, 255, .6);
 		font-size: 12px;
@@ -39,7 +41,7 @@ header{
     		margin-bottom: 2vh;  
     		font-family: 'montserratregular';
     		font-size: 60px;  
-    		@media (max-width: 768px){
+    		@media (max-width: $screen-sm-min){
 				font-size: 40px;
 			}		
     	}
@@ -52,7 +54,7 @@ header{
     	p{
     		padding: 0 5vw;
     		font-size: 18px;
-    		@media (max-width: 768px){
+    		@media (max-width: $screen-sm-min){
 				font-size: 16px;
 			}
     	}
@@ -63,6 +65,10 @@ header{
 			padding-bottom: 0;
 			margin-top: 2vh;
 		}  
+		@media (max-height: 600px){
+			padding-bottom: 2.5vh;
+			margin-top: 3.5vh;
+		}
 
     	.col-sm-12{
     		margin-bottom: 4vh;
@@ -70,14 +76,17 @@ header{
 		
     	.title{    		
     		margin-bottom: 3vh; 
-    		@media (max-width: 990px){
+    		@media (max-width: $screen-md-min){
     			margin-bottom: 1vh;
     			text-align: center;
     		}    		 		
     	}
     	p{
-    		@media (max-width: 990px){
+    		@media (max-width: $screen-md-min){
     			text-align: center;
+    		}
+    		@media (max-width: $screen-sm-min){
+    			padding: 0 5vh;
     		}
     	}
     }
@@ -85,14 +94,14 @@ header{
 
 .standart-section{
 	padding: 120px 0;
-	@media (max-width: 992px){
+	@media (max-width: $screen-md-min){
 		padding: 50px 0;
 	}
 }
 
 .events-wrap{
 	padding: 75px 0;
-	@media (max-width: 992px){
+	@media (max-width: $screen-md-min){
 		padding: 25px 0;
 	} 
 
@@ -135,7 +144,7 @@ header{
 	}
 	.event-item-desq{
 		margin: 30px 0;
-		@media (max-width: 768px){
+		@media (max-width: $screen-sm-min){
 			margin: 15px 0;
 		}
 
@@ -144,7 +153,7 @@ header{
 			font-size: 16px;
 			color: $gray-dark;
 			margin-bottom: 15px;
-			@media (max-width: 768px){
+			@media (max-width: $screen-sm-min){
 				margin-bottom: 10px;
 			}
 		}
@@ -163,7 +172,7 @@ header{
 		}
 		dl{
 			display: inline-block;
-			@media (max-width: 768px){
+			@media (max-width: $screen-sm-min){
 				margin-bottom: 50px;
 			}
 			& + dl{
@@ -184,7 +193,7 @@ header{
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top center;
-		@media (max-width: 768px){
+		@media (max-width: $screen-sm-min){
 			background-position: left top;
 		}
 	}
@@ -194,12 +203,16 @@ header{
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top center;
+		@media (max-width: $screen-sm-min){
+			background-position: right top;
+		}
 		.section-w-bg-text{
 			h4{
 				color: $gray-dark;				
 			}	
 			p{
 				color: $gray-base;
+				padding-right: 15px;
 			}
 			.btn{
 				margin-top: 35px;
@@ -219,25 +232,25 @@ header{
 	
 	.help-list{
 		padding-top: 80px;
-		@media (max-width: 768px){
+		@media (max-width: $screen-sm-min){
 			padding-top: 40px;
 		}
 
 		.donate-item-wrap{
 			display: flex;
 			margin-bottom: 60px;
-			@media (max-width: 768px){
+			@media (max-width: $screen-sm-min){
 				margin-bottom: 30px;
 			}
 			&:nth-child(even){
 				padding-left: 55px;
-				@media (max-width: 992px){
+				@media (max-width: $screen-md-min){
 					padding-left: 15px;
 				}
 			}
 			&:nth-child(odd){
 				padding-right: 55px;
-				@media (max-width: 992px){
+				@media (max-width: $screen-md-min){
 					padding-right: 15px;
 				}
 			}			
@@ -278,7 +291,7 @@ header{
 		justify-content: space-between;
 		flex-wrap: wrap;
 		margin-top: 80px;
-		@media (max-width: 768px){
+		@media (max-width: $screen-sm-min){
 			justify-content: center;
 		}
 

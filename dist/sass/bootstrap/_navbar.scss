@@ -245,7 +245,7 @@
     &:hover,
     &:focus,
     &:active {
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
          background-color: $navbar-default-li-hover-bg; 
       }
      
@@ -458,14 +458,14 @@
         color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
         border-color: $navbar-default-link-border-color;
-        @media (max-width: 768px){
+        @media (max-width: 767px){
           border-color: transparent;
           color: $gray-dark;
         }
       }
     }
     > .active {
-      @media (max-width: 768px){
+      @media (max-width: 767px){
         background-color: $navbar-default-li-hover-bg;
       }
     }
@@ -477,7 +477,7 @@
         background-color: $navbar-default-link-active-bg;
         border-color: $navbar-default-link-border-color;
 
-        @media (max-width: 768px){
+        @media (max-width: 767px){
           border-color: transparent;
           color: $gray-dark;
           background-color: $navbar-default-link-hover-bg;

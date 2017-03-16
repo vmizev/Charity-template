@@ -21,6 +21,9 @@
   font-family: $btn-font-family;
   @include button-size($btn-padding-base-vertical, $btn-padding-base-horizontal, $btn-font-size, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
+  @media (max-width: 479px){
+    padding: 10px 35px;
+  }
 
   &,
   &:active,

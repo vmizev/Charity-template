@@ -2851,6 +2851,9 @@ select[multiple].input-lg,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  @media (max-width: 479px) {
+    .btn {
+      padding: 10px 35px; } }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
@@ -3946,7 +3949,7 @@ tbody.collapse.in {
   margin: 20px -15px; }
   .navbar-nav > li {
     padding: 0px 40px; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .navbar-nav > li:hover, .navbar-nav > li:focus, .navbar-nav > li:active {
         background-color: #fff; } }
     .navbar-nav > li:hover a, .navbar-nav > li:focus a, .navbar-nav > li:active a {
@@ -4125,18 +4128,18 @@ tbody.collapse.in {
       color: #fff;
       background-color: transparent;
       border-color: #fff; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
           border-color: transparent;
           color: #150c31; } }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .navbar-default .navbar-nav > .active {
       background-color: #fff; } }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #fff;
     background-color: transparent;
     border-color: #fff; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
         border-color: transparent;
         color: #150c31;
@@ -6182,6 +6185,9 @@ header {
     .inner {
       height: auto;
       padding-bottom: 50px; } }
+  @media (max-height: 600px) {
+    .inner {
+      height: auto; } }
   .inner p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 12px; }
@@ -6215,17 +6221,24 @@ header {
       .inner .inner-advantages {
         padding-bottom: 0;
         margin-top: 2vh; } }
+    @media (max-height: 600px) {
+      .inner .inner-advantages {
+        padding-bottom: 2.5vh;
+        margin-top: 3.5vh; } }
     .inner .inner-advantages .col-sm-12 {
       margin-bottom: 4vh; }
     .inner .inner-advantages .title {
       margin-bottom: 3vh; }
-      @media (max-width: 990px) {
+      @media (max-width: 992px) {
         .inner .inner-advantages .title {
           margin-bottom: 1vh;
           text-align: center; } }
-    @media (max-width: 990px) {
+    @media (max-width: 992px) {
       .inner .inner-advantages p {
         text-align: center; } }
+    @media (max-width: 768px) {
+      .inner .inner-advantages p {
+        padding: 0 5vh; } }
 
 .standart-section {
   padding: 120px 0; }
@@ -6349,10 +6362,14 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center; }
+    @media (max-width: 768px) {
+      .section-w-bg.visit-shop {
+        background-position: right top; } }
     .section-w-bg.visit-shop .section-w-bg-text h4 {
       color: #150c31; }
     .section-w-bg.visit-shop .section-w-bg-text p {
-      color: #807996; }
+      color: #807996;
+      padding-right: 15px; }
     .section-w-bg.visit-shop .section-w-bg-text .btn {
       margin-top: 35px; }
   .section-w-bg .section-w-bg-text h4 {
