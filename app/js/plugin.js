@@ -11,3 +11,12 @@
 	
 })(jQuery);
 
+(function ($) {
+	var toggle = $('.navbar-toggle');
+	var header = $('.navbar-fixed-top');
+	
+	toggle.click(function(){
+		header.toggleClass("on-click");
+	})
+
+})(jQuery);

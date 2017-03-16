@@ -202,10 +202,10 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: $border-radius-base;
-  @media (max-width: 768px){
+  @media (max-width: $screen-sm-min){
     margin-right: 50px;
   }
-  @media (max-width: 480px){
+  @media (max-width: $screen-xs-min){
     margin-right: $navbar-padding-horizontal;
   }
 
@@ -435,7 +435,7 @@
     @media (max-width: 768px){
       margin-left: 50px;
     }
-    @media (max-width: 480px){
+    @media (max-width: $screen-xs-min){
       margin-left: $navbar-padding-horizontal;
     }
     &:hover,

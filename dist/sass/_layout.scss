@@ -5,6 +5,9 @@ header{
 	&.on-scroll{
 		background-color: $footer-bg;
 	}
+	&.on-click{
+		background-color: $footer-bg;
+	}
 }
 .inner{
 	height: 100vh;
@@ -86,7 +89,7 @@ header{
     			text-align: center;
     		}
     		@media (max-width: $screen-sm-min){
-    			padding: 0 5vh;
+    			padding: 0 7vh;
     		}
     	}
     }
@@ -291,13 +294,9 @@ header{
 		justify-content: space-between;
 		flex-wrap: wrap;
 		margin-top: 80px;
-		@media (max-width: $screen-sm-min){
-			justify-content: center;
-		}
-
+		
 		.donor-item{
-			text-align: center;
-			padding: 10px 20px;
+			margin: 10px 0;
 
 			.donor-item-img{
 				img{

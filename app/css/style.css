@@ -6154,6 +6154,8 @@ header {
   transition: all .5s linear; }
   header.on-scroll {
     background-color: #202020; }
+  header.on-click {
+    background-color: #202020; }
 
 .inner {
   height: 100vh;
@@ -6238,7 +6240,7 @@ header {
         text-align: center; } }
     @media (max-width: 768px) {
       .inner .inner-advantages p {
-        padding: 0 5vh; } }
+        padding: 0 7vh; } }
 
 .standart-section {
   padding: 120px 0; }
@@ -6449,15 +6451,8 @@ header {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-top: 80px; }
-  @media (max-width: 768px) {
-    .best-donors-list-wrap .best-donors-list {
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
   .best-donors-list-wrap .best-donors-list .donor-item {
-    text-align: center;
-    padding: 10px 20px; }
+    margin: 10px 0; }
     .best-donors-list-wrap .best-donors-list .donor-item .donor-item-img img {
       -webkit-border-radius: 50%;
               border-radius: 50%;
